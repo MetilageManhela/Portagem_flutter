@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:portagem_web/screens/login.dart';
 
 
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       //home:   const MainMenu(),
       home: const LoginPage(),
-      builder: EasyLoading.init(),
+     
     );
   }
 }
