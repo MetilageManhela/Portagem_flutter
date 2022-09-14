@@ -38,12 +38,12 @@ class _BottomMenu extends State<BottomMenu> {
           onTabChange: (index){
               switch(index) { 
                 case 0: {
-                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
+                 Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>
                    const Inicio()));
                 } 
                 break; 
                 case 1: {
-                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
+                 Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>
                    const Equipamento_Categoria()));
                 } 
                 break; 
@@ -58,7 +58,7 @@ class _BottomMenu extends State<BottomMenu> {
                 } 
                 break; 
                 case 4: {
-                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
+                 Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>
                  Perfil()));
                  } 
                 break; 

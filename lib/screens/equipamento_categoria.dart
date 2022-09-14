@@ -62,7 +62,7 @@ class _Equipamento_CategoriaState extends State<Equipamento_Categoria> {
                  
                    ElevatedButton(
                   onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Salas()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Salas()));
                   },
                   child: const Text('SALAS'),
                   style: ButtonStyle(
@@ -92,7 +92,7 @@ class _Equipamento_CategoriaState extends State<Equipamento_Categoria> {
                  ),
                    ElevatedButton(
                   onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Cabines()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Cabines()));
                   },
                   child: const Text('CABINES'),
                   style: ButtonStyle(

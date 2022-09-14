@@ -1,8 +1,15 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:portagem_web/model/usuario.dart';
+import 'package:portagem_web/screens/equipamento_categoria.dart';
+import 'package:portagem_web/screens/inicio.dart';
+import 'package:portagem_web/services/login_service.dart'; 
+import 'package:http/http.dart' as http;
 import '../constants.dart';
-
+import 'home.dart'; 
+import 'package:flutter_session/flutter_session.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart'; 
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -20,17 +27,34 @@ class _LoginPageState extends State<LoginPage> {
     super.dispose();
      }
    
+   //metodo para autenticacao 
+    Future login  (String email, String password) async{
+    final url=Uri.parse(ApiConstants.loginUrl);
+    final response=await http.post(url,body: {
+    "email":email,
+    "password":password,
+     });
+    if(response.statusCode==200) { 
+     EasyLoading.dismiss();
+     print(response.statusCode); 
+    final Usuario usuario =Usuario.fromJson(jsonDecode(response.body)); 
 
+    await FlutterSession().set('usuarioId', usuario.id);
+    await FlutterSession().set('usuarioNome', usuario.name);
+     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const Inicio()));
+    }else{
+       EasyLoading.dismiss();
+       EasyLoading.showError('Dados Incorrectos');
+    }
+  }
 //metodo para autenticacao 
 bool hide = true;
 @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
-      backgroundColor: Colors.blue,
+     backgroundColor: Colors.blue,
       body:SingleChildScrollView(
         child: Stack(
-          
           children: [
             const Padding(
               padding: EdgeInsets.only(top: 50,left: 40),
@@ -96,11 +120,14 @@ bool hide = true;
                             padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 60)
                           ),
                           onPressed: (){
-                            // EasyLoading.show(status: 'loading...');
-
-                            // login(emailController.text, passwordController.text);
-                             
-                            
+                               
+                              
+                            if (_formKey.currentState!.validate()) {
+                            //  ScaffoldMessenger.of(context).showSnackBar(
+                            //  const SnackBar(content: Text('A processar...')),);
+                            EasyLoading.show();
+                             login(emailController.text, passwordController.text);
+                             }
                           }, child: const Text("Entrar")
                           ),
                     ),

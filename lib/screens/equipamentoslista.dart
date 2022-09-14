@@ -132,9 +132,11 @@ List<Equipamento>? _equipamentoo(){
                               style: TextStyle(color: Colors.white, fontSize: 20),
                             ),
                               onPressed: () {
+                                Navigator.pop(context);
                               submeter_checkList();
-                              Navigator.pop(context);
                               EasyLoading.show(status: 'loading...');
+                              //Navigator.pop(context);
+                              
                             },
                             color: Colors.blue[400],
                              ),
@@ -144,7 +146,7 @@ List<Equipamento>? _equipamentoo(){
                               style: TextStyle(color: Colors.white, fontSize: 20),
                              ),
                             onPressed: () {
-                            // Navigator.pop(context);
+                            Navigator.pop(context);
                             },
                             color: Colors.red[400],
                           )
@@ -231,7 +233,8 @@ Future submeter_checkList() async{
   if(response.statusCode==200){
     EasyLoading.dismiss();
     EasyLoading.showSuccess('Submetido com sucesso!');
-    Navigator.pop(context);
+
+    // Navigator.pop(context);
   }else{
     EasyLoading.dismiss();
     EasyLoading.showError('Erro ao submeter!');
