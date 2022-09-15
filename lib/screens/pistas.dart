@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portagem_web/testes/checkbox.dart';
-
 import 'equipamentoslista.dart';
 import 'menubottom.dart';
-import 'reportar_problema.dart';
 import 'navbar.dart';
 
 class Pistas extends StatelessWidget {

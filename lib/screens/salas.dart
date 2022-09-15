@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portagem_web/screens/cabines.dart';
 import 'package:portagem_web/screens/equipamentoslista.dart';
-import 'package:portagem_web/screens/pistas.dart';
-import 'package:portagem_web/screens/salas.dart';
-import 'package:portagem_web/testes/checkbox.dart';
-import 'reportar_problema.dart';
 import 'navbar.dart';
 import 'menubottom.dart';
 class Salas extends StatelessWidget {

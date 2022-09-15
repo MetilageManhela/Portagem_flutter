@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:portagem_web/screens/reportar_problema.dart';
 import 'package:portagem_web/services/solicitacoes_service.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'menubottom.dart';
@@ -28,7 +27,7 @@ class _Solicitacao extends State<Solicitacao>{
        return Scaffold(
         bottomNavigationBar: BottomMenu(selected: 3,),
             appBar: AppBar(
-              title: Text("Solicitacao"),
+              title: const Text("Solicitacao"),
             ),
             body:Container( 
                padding: EdgeInsets.all(25),
@@ -40,7 +39,7 @@ class _Solicitacao extends State<Solicitacao>{
                     TextField(
                     controller: solicitacao_Controller,
                     autocorrect: true,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                     //border: OutlineInputBorder(),
                     labelText: 'Descreva Solicitacao',
                     helperText: " ",
@@ -56,7 +55,7 @@ class _Solicitacao extends State<Solicitacao>{
                         desc: "Deseja submeter a solicitacao??",
                         buttons: [
                           DialogButton(
-                            child: Text(
+                            child: const Text(
                               "Sim",
                               style: TextStyle(color: Colors.white, fontSize: 20),
                             ),
@@ -73,7 +72,7 @@ class _Solicitacao extends State<Solicitacao>{
                           ),
                           DialogButton(
                           
-                            child: Text(
+                            child: const Text(
                               "Nao",
                               style: TextStyle(color: Colors.white, fontSize: 20),
                             ),
