@@ -5,9 +5,6 @@ import 'package:flutter_session/flutter_session.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:portagem_web/screens/equipamento_categoria.dart';
 import 'package:portagem_web/screens/perfil.dart';
-
-
-import '../testes/teste.dart';
 import 'equipamentoslista.dart';
 import 'inicio.dart';
 

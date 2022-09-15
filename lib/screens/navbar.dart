@@ -5,7 +5,6 @@ import 'package:portagem_web/screens/provincias.dart';
 import 'package:portagem_web/screens/provincias_form.dart';
 import 'package:portagem_web/screens/reportar_problema.dart';
 import 'package:portagem_web/screens/solicitacao.dart';
-import '../testes/localizaco.dart';
 import 'login2.dart';
 import 'inicio.dart';
 import 'equipamento_categoria.dart';

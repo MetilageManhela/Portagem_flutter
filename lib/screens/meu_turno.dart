@@ -11,7 +11,6 @@ import '../model/equipamento.dart';
 import '../model/provincia.dart';
 import '../model/turno.dart';
 import '../services/turno_service.dart';
-import '../testes/contactmodel.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import '../constants.dart';
 
