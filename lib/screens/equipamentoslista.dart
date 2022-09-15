@@ -110,8 +110,10 @@ List<Equipamento>? _equipamentoo(){
                            ),
                            child: SizedBox(
                             width: 200,
-                            child: RaisedButton(
-                            color: Colors.blue,
+                            //RaisedButton
+                            
+                            child: ElevatedButton(
+                            //color: Colors.blue,
                             child: Text(
                             "Submeter (${selectedEquipamentos!.length})",
                             style: const TextStyle(
