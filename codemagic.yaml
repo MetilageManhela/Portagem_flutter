@@ -5,7 +5,6 @@ workflows:
      
     scripts:
       - flutter packages pub get
-      - flutter analyze
       - flutter test
       - flutter build apk --no-sound-null-safety --release --build-name=1.0.0
       
