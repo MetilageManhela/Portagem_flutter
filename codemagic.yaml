@@ -12,5 +12,6 @@ workflows:
       xcode: latest
     artifacts:
       - build/**/outputs/apk/**/*.apk
+      - build/**/outputs/apk/**/*.ipa
       
       
