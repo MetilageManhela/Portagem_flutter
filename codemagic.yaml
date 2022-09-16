@@ -5,7 +5,7 @@ workflows:
      
     scripts:
       - flutter packages pub get
-      - flutter build ios --no-sound-null-safety --release --no-codesign --build-name=1.0.0 
+      - flutter build ipa --no-sound-null-safety --release --no-codesign --build-name=1.0.0 
       # - flutter build apk --no-sound-null-safety --debug --build-name=1.0.0  
     environment:
       vars:
@@ -16,9 +16,9 @@ workflows:
       flutter: stable
       xcode: latest
     artifacts:
-      # - build/ios/ipa/*.ipa
+      - build/ios/ipa/*.ipa
       # - /tmp/xcodebuild_logs/*.log
-      # - flutter_drive.log  
+      - flutter_drive.log  
       - build/**/outputs/apk/**/*.ipa
       
 
