@@ -1,25 +1,48 @@
 workflows:
-  ios-workflow:
-    name: iOS Workflow
-    # instance_type: mac_mini
+  android-workflow:
+    name: Android Workflow
     max_build_duration: 120
+     
+    scripts:
+      - flutter packages pub get
+      - flutter build ios --no-sound-null-safety --release --no-codesign --build-name=1.0.0 
+      # - flutter build apk --no-sound-null-safety --debug --build-name=1.0.0  
     environment:
       vars:
-        XCODE_WORKSPACE: "Runner.xcworkspace"
-        XCODE_SCHEME: "Runner"
-        BUNDLE_ID: "io.codemagic.flutteryaml" # <-- Put your bundle id here
-        APP_STORE_ID: 1111111111 # <-- Use the TestFlight Apple id number (An automatically generated ID assigned to your app) found under General > App Information > Apple ID.
+          XCODE_WORKSPACE: "Runner.xcworkspace"
+          XCODE_SCHEME: "Runner"
+          BUNDLE_ID: "io.codemagic.flutteryaml" # <-- Put your bundle id here
+          APP_STORE_ID: 1111111111 # <-- Use the TestFlight Apple id number (An automatically generated ID assigned to your app) found under General > App Information > Apple ID.
       flutter: stable
       xcode: latest
-      - name: Get Flutter packages
-        script: |
-          flutter packages pub get
-      - name: Flutter build ipa and automatic versioning
-        script: |
-          flutter build ios --no-sound-null-safety --release --no-codesign --build-name=1.0.0     
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
-      - flutter_drive.log
+      - flutter_drive.log  
+      
+
+
+
+
+
+# workflows:
+#   ios-workflow:
+#     name: iOS Workflow
+#     # instance_type: mac_mini
+#     max_build_duration: 120
+#     environment:
+      
+#       flutter: stable
+#       xcode: latest
+#       - name: Get Flutter packages
+#         script: |
+#           flutter packages pub get
+#       - name: Flutter build ipa and automatic versioning
+#         script: |
+#           flutter build ios --no-sound-null-safety --release --no-codesign --build-name=1.0.0     
+#     artifacts:
+#       - build/ios/ipa/*.ipa
+#       - /tmp/xcodebuild_logs/*.log
+#       - flutter_drive.log
    
       
