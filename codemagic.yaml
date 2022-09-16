@@ -5,13 +5,14 @@ workflows:
      
     scripts:
       - flutter packages pub get
-      - flutter build apk --no-sound-null-safety --release --build-name=1.0.0
+      # - flutter build apk --no-sound-null-safety --release --build-name=1.0.0
+      - flutter build ipa --no-sound-null-safety --release --build-name=1.0.0
       
     environment:
       flutter: stable
       xcode: latest
     artifacts:
-      - build/**/outputs/apk/**/*.apk
-      - build/**/outputs/apk/**/*.ipa
+      - build/**/outputs/ipa/**/*.ipa
+      # - build/**/outputs/apk/**/*.apk
       
       
