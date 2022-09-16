@@ -11,14 +11,10 @@ workflows:
         APP_STORE_ID: 1111111111 # <-- Use the TestFlight Apple id number (An automatically generated ID assigned to your app) found under General > App Information > Apple ID.
       flutter: stable
       xcode: latest
-      cocoapods: default
-   
       - name: Get Flutter packages
         script: |
           flutter packages pub get
-   
-        
-      - name: Flutter build ipa 
+      - name: Flutter build ipa and automatic versioning
         script: |
           flutter build ios --no-sound-null-safety --release --no-codesign --build-name=1.0.0     
     artifacts:
