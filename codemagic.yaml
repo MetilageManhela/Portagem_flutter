@@ -16,9 +16,10 @@ workflows:
       flutter: stable
       xcode: latest
     artifacts:
-      - build/ios/ipa/*.ipa
-      - /tmp/xcodebuild_logs/*.log
-      - flutter_drive.log  
+      # - build/ios/ipa/*.ipa
+      # - /tmp/xcodebuild_logs/*.log
+      # - flutter_drive.log  
+      - build/**/outputs/apk/**/*.ipa
       
 
 
