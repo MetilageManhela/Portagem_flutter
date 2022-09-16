@@ -12,7 +12,6 @@ workflows:
     environment:
       flutter: stable
       xcode: latest
-      cocapods: default
     artifacts:
       - build/**/outputs/apk/**/*.apk
       
