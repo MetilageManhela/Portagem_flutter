@@ -6,7 +6,7 @@ workflows:
     scripts:
       - flutter packages pub get
       # - flutter build apk --no-sound-null-safety --release --build-name=1.0.0
-      - flutter build ipa --no-sound-null-safety --release --build-name=1.0.0
+      - flutter build ipa --no-sound-null-safety 
       
     environment:
       flutter: stable
