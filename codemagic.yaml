@@ -12,32 +12,15 @@ workflows:
       flutter: stable
       xcode: latest
       cocoapods: default
-    scripts:
-      - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
-        script: |
-          keychain initialize
-      - name: Fetch signing files
-        script: |
-          app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_STORE --create
-      - name: Use system default keychain
-        script: |
-          keychain add-certificates
-      - name: Set up code signing settings on Xcode project
-        script: |
-          xcode-project use-profiles
+   
       - name: Get Flutter packages
         script: |
           flutter packages pub get
    
-        ignore_failure: true
-      - name: Install pods
+        
+      - name: Flutter build ipa 
         script: |
-          find . -name "Podfile" -execdir pod install \;
-      - name: Flutter build ipa and automatic versioning
-        script: |
-          flutter build ipa --no-sound-null-safety --release \
-          --build-name=1.0.0 \
-
+          flutter build ios --no-sound-null-safety --release --no-codesign --build-name=1.0.0     
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
