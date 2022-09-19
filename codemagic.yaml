@@ -6,8 +6,8 @@ workflows:
      
     scripts:
       - flutter packages pub get
-      - flutter build ios --no-sound-null-safety --debug --no-codesign 
-      - flutter build apk --no-sound-null-safety --debug --build-name=1.0.0  
+      - flutter build ipa --no-sound-null-safety --debug --no-codesign 
+      # - flutter build apk --no-sound-null-safety --debug --build-name=1.0.0  
     environment:
       vars:
           XCODE_WORKSPACE: "Runner.xcworkspace"
@@ -15,9 +15,10 @@ workflows:
       flutter: stable
       xcode: latest
     artifacts:
-      - build/ios/ipa/*.ipa
-      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
-      - build/**/outputs/apk/**/*.apk
+      # - build/ios/ipa/*.ipa
+      # - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+      # - build/**/outputs/apk/**/*.apk
+      - build/ios/iphoneos/Runner.app
 
 
 
