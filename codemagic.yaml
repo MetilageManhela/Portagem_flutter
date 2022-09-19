@@ -2,6 +2,7 @@ workflows:
   android-workflow:
     name: Android Workflow
     max_build_duration: 120
+    instance_type: mac_mini
      
     scripts:
       - flutter packages pub get
@@ -15,11 +16,11 @@ workflows:
       flutter: stable
       xcode: latest
     artifacts:
-      - build/ios/ipa/*.ipa
-      # - /tmp/xcodebuild_logs/*.log
-      - flutter_drive.log  
-      - build/**/outputs/**/*.aab
-      - build/ios/iphoneos/Runner.app.
+      # - build/ios/ipa/*.ipa
+      # - flutter_drive.log  
+      # - build/**/outputs/**/*.aab
+      # - build/ios/iphoneos/Runner.app.
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
       
 
 
