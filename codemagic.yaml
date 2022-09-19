@@ -6,13 +6,9 @@ workflows:
     scripts:
       - flutter packages pub get
       - flutter build ios --no-sound-null-safety --release --no-codesign 
+      
       # - flutter build apk --no-sound-null-safety --debug --build-name=1.0.0  
-    environment:
-      vars:
-          XCODE_WORKSPACE: "Runner.xcworkspace"
-          XCODE_SCHEME: "Runner"
-          BUNDLE_ID: "io.codemagic.flutteryaml" # <-- Put your bundle id here
-          APP_STORE_ID: 1111111111 # <-- Use the TestFlight Apple id number (An automatically generated ID assigned to your app) found under General > App Information > Apple ID.
+
       flutter: stable
       xcode: latest
     artifacts:
@@ -20,7 +16,7 @@ workflows:
       # - /tmp/xcodebuild_logs/*.log
       - flutter_drive.log  
       - build/**/outputs/**/*.aab
-
+      - build/ios/iphoneos/Runner.app.
       
 
 
