@@ -6,7 +6,7 @@ workflows:
      
     scripts:
       - flutter packages pub get
-      - flutter build ios --no-sound-null-safety --debug --no-codesign 
+      - flutter build ios --no-sound-null-safety --release --no-codesign 
       # - flutter build apk --no-sound-null-safety --debug --build-name=1.0.0  
     environment:
       vars:
