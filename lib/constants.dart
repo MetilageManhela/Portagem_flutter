@@ -2,7 +2,6 @@
     //-----------------------------//-------------------------//-----------------------
     static String baseUrl = 'https://jsonplaceholder.typicode.com';
     static String usersEndpoint = '/users';
- 
     static String provinciaUrl='http://192.168.0.172:8000/api/provincia-api';
     //-------------------//------------------------------//------------------------
     static String loginUrl='http://192.168.0.172:9000/api/apilogin';
@@ -12,8 +11,6 @@
     static String checkListUrl='http://192.168.0.172:9000/api/checkListUser';
     static String turno_userUrl='http://192.168.0.172:9000/api/userturno/';
      static String reportar_problema='http://192.168.0.172:9000/api/salvarProblema';
-
-    
     //-------------------//------------------------------//------------------------
     static String portagensUrl='http://192.168.0.172:9000/api/portagens';
     static String check_inUrl='http://192.168.0.172:9000/api/check_in';
@@ -25,8 +22,5 @@
    
     static String localizacao_equipamentoUrl='http://192.168.0.172:9000/api/localizacao_equipamento'; 
     
-
-
-
-    }
+}
 

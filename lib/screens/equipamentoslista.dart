@@ -87,10 +87,10 @@ List<Equipamento>? _equipamentoo(){
                             decoration: const BoxDecoration(
                             border: Border(
                             bottom: BorderSide(
-                              width: 3,
+                            width: 3,
                             color: Colors.black12,
                             )
-                                          )
+                           )
                                              ),
                             child: Itens(
                             _equipamentoo()![index].id,

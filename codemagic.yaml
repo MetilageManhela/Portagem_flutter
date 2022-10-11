@@ -10,7 +10,7 @@ workflows:
       # - flutter build apk --no-sound-null-safety --debug --build-name=1.0.0  
     environment:
       vars:
-          XCODE_WORKSPACE: "Runner.xcworkspace"
+          XCODE_WORKSPACE: "Runner.xcworkspace"  
 
       flutter: stable
       xcode: latest
