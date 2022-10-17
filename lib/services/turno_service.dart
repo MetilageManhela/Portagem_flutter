@@ -22,24 +22,5 @@ class TurnoService {
     return null;
   }
 
-// Future salvar(String descricao) async{
- 
-//     var usuario=await FlutterSession().get('usuarioId');
-//     final url=Uri.parse(ApiConstants.solicitacoes_salvarUrl);
-//     final response=await http.post(url,body: {
-//       "descricao":descricao,
-//       "user_id":jsonEncode (usuario),
-
-//     });
-//   if(response.statusCode==200){
-//     EasyLoading.dismiss();
-//     EasyLoading.showSuccess('Submetido com sucesso!');
-    
-//   }else{
-//     EasyLoading.dismiss();
-//     EasyLoading.showError('Erro ao submeter!');
-   
-//   };
-// }
 
 }

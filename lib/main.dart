@@ -8,9 +8,8 @@ class MyApp extends StatelessWidget {
 @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-    
-      debugShowCheckedModeBanner: false,
-      //home:   const MainMenu(),
+     debugShowCheckedModeBanner: false,
+      //theme: ThemeData(primaryColor: Color.fromRGBO(58, 66, 86, 1.0)),
       home: const LoginPage(),
       builder: EasyLoading.init(),
     );

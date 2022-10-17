@@ -9,6 +9,7 @@ class Pistas extends StatelessWidget {
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: Scaffold(
       bottomNavigationBar: BottomMenu(selected: 1,),
     // backgroundColor: Colors.amber[100],

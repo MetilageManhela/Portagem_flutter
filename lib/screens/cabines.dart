@@ -8,9 +8,9 @@ class Cabines extends StatelessWidget {
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: Scaffold(
     bottomNavigationBar: BottomMenu(selected: 1),
-    //backgroundColor: Colors.black12,
     drawer: NavBar(),
     appBar:AppBar(
       title: const Text('Cabines'),

@@ -3,10 +3,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_session/flutter_session.dart';
 
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:portagem_web/reaproveitaveis/constantes.dart';
 import 'package:portagem_web/screens/equipamento_categoria.dart';
 import 'package:portagem_web/screens/perfil.dart';
 import 'equipamentoslista.dart';
 import 'inicio.dart';
+import 'notificacoes.dart';
 
 class BottomMenu extends StatefulWidget {
   int selected;
@@ -22,13 +24,13 @@ class _BottomMenu extends State<BottomMenu> {
   Widget build(BuildContext context) {
     return Container(
         
-        color: const Color.fromARGB(117, 152, 171, 206),  
+        // color: const Color.fromARGB(117, 152, 171, 206),  
          child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15),
           child: GNav(
          // backgroundColor: Colors.black,
-          color: Colors.blue,
-          activeColor: Colors.black,
+          color: Colors.black,
+          activeColor: Colors.blue,
           //tabBackgroundColor: Colors.grey.shade800,
           gap: 8,
           selectedIndex:widget.selected,
@@ -50,8 +52,8 @@ class _BottomMenu extends State<BottomMenu> {
                 } 
                 break; 
                 case 3: {
-                //   Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
-                //  IconStepperDemo()));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
+                 Lista(title: 'Seccao',)));
                 } 
                 break; 
                 case 4: {

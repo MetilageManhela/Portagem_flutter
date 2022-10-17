@@ -9,6 +9,7 @@ import 'login2.dart';
 import 'inicio.dart';
 import 'equipamento_categoria.dart';
 import 'meu_turno.dart';
+import 'notificacoes.dart';
 
 
 class NavBar extends StatelessWidget {
@@ -84,7 +85,7 @@ class NavBar extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.notifications),
             title: const Text('Minhas Notificações'),
-             onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>Login2())),
+             onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>Notificacoes())),
           ),
          
           const Divider(),

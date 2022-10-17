@@ -40,11 +40,11 @@ List<Equipamento>? _equipamentoo(){
   void _getData() async {
   _equipamento = (await EquipamentoService().getEquipamentos())!;
   Future.delayed(const Duration(seconds: 1)).then((value) => setState(() {}));
-  }
+   }
   
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
+     @override
+     Widget build(BuildContext context) {
+      return Scaffold(
        bottomNavigationBar: BottomMenu(selected: 1),
        drawer: NavBar(),
        appBar: AppBar(
@@ -106,7 +106,7 @@ List<Equipamento>? _equipamentoo(){
                            if (selectedEquipamentos!.length > 0) Padding(
                            padding: const EdgeInsets.symmetric(
                            horizontal: 25,
-                           vertical: 10,
+                           vertical: 0,
                            ),
                            child: SizedBox(
                             width: 200,
@@ -173,8 +173,8 @@ List<Equipamento>? _equipamentoo(){
   
    Widget Itens(int id, String descricao, String tipo,  String cabine, int portagem_id, bool selected,int index) {
     return ListTile(
-      visualDensity: const VisualDensity(vertical: -4),
-      tileColor: Colors.amber[100],
+      visualDensity: const VisualDensity(vertical: -2),
+      // tileColor: Colors.amber[100],
       leading: const CircleAvatar(
         backgroundColor: Colors.blue,
         child: Icon(

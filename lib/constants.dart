@@ -17,8 +17,9 @@
 
     static String equipamento_userUrl='http://192.168.0.172:9000/api/equipamento_user';
     static String solicitacoesUrl='http://192.168.0.172:9000/api/solicitacoes';
+    static String updateNotificacoes='http://192.168.0.172:9000/api/updateNotificacoes';
     //---------------------------//------------------//--------------//-------------------
-    static String notificacoes_userUrl='http://192.168.0.172:9000/api/notificacoes_user';
+    static String notificacoes_userUrl='http://192.168.0.172:9000/api/notificacoes_pendentes/'; // recebe um parametro id
    
     static String localizacao_equipamentoUrl='http://192.168.0.172:9000/api/localizacao_equipamento'; 
     
