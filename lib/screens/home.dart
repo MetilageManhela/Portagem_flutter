@@ -35,31 +35,33 @@ class _HomeState extends State<Home> {
         title: const Text('Lista de equipamentos'),
         centerTitle: true,
       ),
-      body: _userModel == null || _userModel!.isEmpty
-          ? const Center(
-              child: CircularProgressIndicator(),
-            )
-          : ListView.builder(
-              itemCount: _userModel!.length,
-              itemBuilder: (context, index) {
-                return Card(
-                
-                  child:ListTile(
-                  tileColor: Colors.orangeAccent[100] ,
-                  leading: FlutterLogo(),
-                    title: Text(_userModel![index].name),
-                    trailing: Icon(Icons.more_vert),
-                    subtitle: Text(_userModel![index].address.city),
-                    dense: true,
-                    isThreeLine: true,
-                    onTap: () {
-                      return null;
-                    }, 
-                  ),
-
-                );
-              },
-            ),
+      body: SafeArea(
+        child: _userModel == null || _userModel!.isEmpty
+            ? const Center(
+                child: CircularProgressIndicator(),
+              )
+            : ListView.builder(
+                itemCount: _userModel!.length,
+                itemBuilder: (context, index) {
+                  return Card(
+                  
+                    child:ListTile(
+                    tileColor: Colors.orangeAccent[100] ,
+                    leading: FlutterLogo(),
+                      title: Text(_userModel![index].name),
+                      trailing: Icon(Icons.more_vert),
+                      subtitle: Text(_userModel![index].address.city),
+                      dense: true,
+                      isThreeLine: true,
+                      onTap: () {
+                        return null;
+                      }, 
+                    ),
+      
+                  );
+                },
+              ),
+      ),
     );
   }
 }

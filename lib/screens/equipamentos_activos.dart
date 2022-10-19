@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'equipamentoslista.dart';
 import 'menubottom.dart';
 import 'reportar_problema.dart';
 import 'navbar.dart';
@@ -15,7 +16,7 @@ Widget build(BuildContext context) {
       backgroundColor: Colors.grey[350],
     drawer: NavBar(),
     appBar:AppBar(
-      title: Text('Equipamentoss'),
+      title: const Text('Equipamentoss'),
     ),
     body: SafeArea(
       child: Center(
@@ -47,11 +48,9 @@ Widget build(BuildContext context) {
                ),
                ),
                 ),
- 
-            
-                Padding(
-                padding: const EdgeInsets.symmetric(vertical: 15.0),
-            ),
+                const Padding(
+                padding: EdgeInsets.symmetric(vertical: 15.0),
+                ),
                    ElevatedButton(
                   onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>ReportarProblema()));
@@ -77,8 +76,8 @@ Widget build(BuildContext context) {
                ),
                ),
               ),
-                Padding(
-                padding: const EdgeInsets.symmetric(vertical: 15.0),
+                const Padding(
+                padding: EdgeInsets.symmetric(vertical: 15.0),
             ),
                ElevatedButton(
                   onPressed: () {
@@ -105,12 +104,14 @@ Widget build(BuildContext context) {
                ),
                ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 18.0),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 18.0),
             ),
             ElevatedButton(
                   onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ReportarProblema()));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
+                  EquipamentoLista(titulo: "Outros" , pesquisa: "Outros"))
+                  );
                   },
                   child: const Text('OUTROS'),
                   style: ButtonStyle(
@@ -118,17 +119,9 @@ Widget build(BuildContext context) {
                   shadowColor: MaterialStateProperty.all(Colors.red),
                   padding: MaterialStateProperty.all(const EdgeInsets.all(30)),
                   minimumSize: MaterialStateProperty.all(const Size(300, 40)),
-                      // fixedSize: MaterialStateProperty.all(const Size(200, 40)),
-                //  side: MaterialStateProperty.all(
-                //  const BorderSide(
-                //   color: Colors.black,
-                //   width: 1,
-                //  ),
-                //  ),
-    
-                 shape: MaterialStateProperty.all(
-                RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(18),
+                  shape: MaterialStateProperty.all(
+                 RoundedRectangleBorder(
+                 borderRadius: BorderRadius.circular(18),
                  ),
                ),
                ),

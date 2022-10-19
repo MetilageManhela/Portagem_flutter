@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_session/flutter_session.dart';
-
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:portagem_web/reaproveitaveis/constantes.dart';
 import 'package:portagem_web/screens/equipamento_categoria.dart';
@@ -24,13 +23,13 @@ class _BottomMenu extends State<BottomMenu> {
   Widget build(BuildContext context) {
     return Container(
         
-        // color: const Color.fromARGB(117, 152, 171, 206),  
+        color: const Color.fromRGBO(58, 66, 86, 1.0),
          child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15),
           child: GNav(
          // backgroundColor: Colors.black,
-          color: Colors.black,
-          activeColor: Colors.blue,
+          color: Colors.white,
+          activeColor: Colors.yellow,
           //tabBackgroundColor: Colors.grey.shade800,
           gap: 8,
           selectedIndex:widget.selected,
@@ -52,8 +51,10 @@ class _BottomMenu extends State<BottomMenu> {
                 } 
                 break; 
                 case 3: {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
-                 Lista(title: 'Seccao',)));
+                //   Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
+                //  Lista(title: 'Seccao',)));
+
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>const Notificacoes()));
                 } 
                 break; 
                 case 4: {
@@ -62,46 +63,43 @@ class _BottomMenu extends State<BottomMenu> {
                  } 
                 break; 
                 
-                case 5: {
-                  SystemNavigator.pop();
-                } 
-                break; 
+                // case 5: {
+                //   SystemNavigator.pop();
+                // } 
+                // break; 
               
                 default: {} 
                 break; 
             } 
           },
-          padding: const EdgeInsets.all(0),
+          padding: const EdgeInsets.symmetric(horizontal: 25),
             tabs: const [
               GButton(
               icon: Icons.home,
-              iconSize: 28,
               ),
               GButton(
               icon: Icons.computer_outlined,
               // text: 'Favorito',
-              iconSize: 28,
+             
               ),
                GButton(
               icon: Icons.wrap_text_outlined,
               // text: 'Ophap',
-              iconSize: 28,
+             
               ),
               GButton(
               icon: Icons.notifications_none_rounded,
               // text: 'Ophap',
-              iconSize: 28,
               ),
-               GButton(
-              icon: Icons.person,
-              // text: 'Ophap',
-              iconSize: 28,
-              ),
-               GButton(
-              icon: Icons.exit_to_app_outlined,
-              // text: 'Ophap',
-              iconSize: 28,
-              ),
+              //  GButton(
+              // icon: Icons.person,
+              // // text: 'Ophap',
+          
+              // ),
+              //  GButton(
+              // icon: Icons.exit_to_app_outlined,
+              // // text: 'Ophap',
+              // ),
           ]),
           ),
       );

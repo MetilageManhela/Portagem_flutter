@@ -29,91 +29,87 @@ class _Solicitacao extends State<Solicitacao>{
             appBar: AppBar(
               title: const Text("Solicitacao"),
             ),
-            body:Container( 
-               padding: EdgeInsets.all(25),
-               child: Column(
-                 mainAxisAlignment: MainAxisAlignment.end,
-                 children: [
-          const SizedBox( height: 100,),
+            body:SafeArea(
+              child: Container( 
+                 padding: const EdgeInsets.all(25),
+                 child: Column(
+                   mainAxisAlignment: MainAxisAlignment.end,
+                   children: [
+                     const SizedBox( height: 100,),
+                      TextField(
+                      controller: solicitacao_Controller,
+                      autocorrect: true,
+                      decoration: const InputDecoration(
+                      labelText: 'Descreva Solicitacao',
+                      helperText: " ",
+                    ),
+                   ),
                    
-                    TextField(
-                    controller: solicitacao_Controller,
-                    autocorrect: true,
-                    decoration: const InputDecoration(
-                    //border: OutlineInputBorder(),
-                    labelText: 'Descreva Solicitacao',
-                    helperText: " ",
-                  ),
-                 ),
-       
-	            ElevatedButton(
-                  onPressed: () {
-                       Alert(
-                        context: context,
-                        type: AlertType.warning,
-                        //title: "",
-                        desc: "Deseja submeter a solicitacao??",
-                        buttons: [
-                          DialogButton(
-                            child: const Text(
-                              "Sim",
-                              style: TextStyle(color: Colors.white, fontSize: 20),
+                          ElevatedButton(
+                    onPressed: () {
+                         Alert(
+                          context: context,
+                          type: AlertType.warning,
+                          //title: "",
+                          desc: "Deseja submeter a solicitacao??",
+                          buttons: [
+                            DialogButton(
+                              child: const Text(
+                                "Sim",
+                                style: TextStyle(color: Colors.white, fontSize: 20),
+                              ),
+                                onPressed: () {
+                                Navigator.pop(context);
+                                EasyLoading.show(status: 'loading...');
+                                SolicitacaoService().salvar(solicitacao_Controller.text );
+                               },
+                              color: Colors.green[400],
                             ),
+                            DialogButton(
+                            
+                              child: const Text(
+                                "Nao",
+                                style: TextStyle(color: Colors.white, fontSize: 20),
+                              ),
                               onPressed: () {
-                              Navigator.pop(context);
+                            
+                                
+                              },
+                              color: Colors.red[400],
+                            )
+                          ],
+                        ).show();
+                
                     
-                 
-                              EasyLoading.show(status: 'loading...');
-                              
-                              
-                              SolicitacaoService().salvar(solicitacao_Controller.text );
-                             },
-                            color: Colors.green[400],
-                          ),
-                          DialogButton(
-                          
-                            child: const Text(
-                              "Nao",
-                              style: TextStyle(color: Colors.white, fontSize: 20),
-                            ),
-                            onPressed: () {
-                          
-                              
-                            },
-                            color: Colors.red[400],
-                          )
-                        ],
-                      ).show();
-              
-                  
-                  
-                  },
-                  child: const Text('Submeter'),
-                  style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
-                  shadowColor: MaterialStateProperty.all(Colors.red),
-                  padding: MaterialStateProperty.all(const EdgeInsets.all(10)),
-                  minimumSize: MaterialStateProperty.all(const Size(350, 40)),
-                      // fixedSize: MaterialStateProperty.all(const Size(200, 40)),
-                //  side: MaterialStateProperty.all(
-                //  const BorderSide(
-                //   color: Colors.black,
-                //   width: 1,
-                //  ),
-                //  ),
-    
-                 shape: MaterialStateProperty.all(
-                RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(0),
+                    
+                    },
+                    child: const Text('Submeter'),
+                    style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
+                    shadowColor: MaterialStateProperty.all(Colors.red),
+                    padding: MaterialStateProperty.all(const EdgeInsets.all(10)),
+                    minimumSize: MaterialStateProperty.all(const Size(350, 40)),
+                        // fixedSize: MaterialStateProperty.all(const Size(200, 40)),
+                  //  side: MaterialStateProperty.all(
+                  //  const BorderSide(
+                  //   color: Colors.black,
+                  //   width: 1,
+                  //  ),
+                  //  ),
+                
+                   shape: MaterialStateProperty.all(
+                  RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0),
+                   ),
                  ),
-               ),
-               ),
-                ),
-
-                  
-                   
-               ],
-               ),
+                 ),
+                  ),
+            
+                    
+                     
+                 ],
+                 ),
+              ),
             )
        );
   }

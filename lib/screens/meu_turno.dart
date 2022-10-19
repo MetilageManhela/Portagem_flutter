@@ -13,20 +13,11 @@ import '../model/turno.dart';
 import '../services/turno_service.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import '../constants.dart';
-
 import 'package:http/http.dart' as http;
-
 import 'menubottom.dart';
-
-
-
-
 class MeuTurno extends StatefulWidget {
-  
-  MeuTurno({Key? key}) : super(key: key);
-
-
-  @override
+    MeuTurno({Key? key}) : super(key: key);
+   @override
   _MeuTurnoState createState() => _MeuTurnoState();
 }
 
@@ -48,10 +39,10 @@ class _MeuTurnoState extends State<MeuTurno> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       bottomNavigationBar: BottomMenu(selected: 1),
+       bottomNavigationBar: BottomMenu(selected: 0),
       drawer: NavBar(),
       appBar: AppBar(
-        title: Text ("Meu Turno"),
+        title: const Text ("Meu Turno"),
         //backgroundColor: Colors.green,
         centerTitle: true,
         // backgroundColor: Colors.black,

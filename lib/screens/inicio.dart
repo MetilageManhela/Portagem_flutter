@@ -23,7 +23,14 @@ class _InicioState extends State<Inicio> {
       
       child: Scaffold( 
           backgroundColor: Colors.white,
-          appBar: AppBar(title: const Text('Início'),),
+          appBar: AppBar(title: const Text('Início'),
+          actions: <Widget>[
+        IconButton(
+          icon: const Icon(Icons.list),
+          onPressed: () {},
+        )
+      ],
+          ),
           drawer: NavBar(),
             bottomNavigationBar: BottomMenu(selected: 0,),
           body: Stack(

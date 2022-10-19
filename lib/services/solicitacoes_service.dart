@@ -26,8 +26,7 @@ class SolicitacaoService {
   }
 //salva solicitacao
 Future salvar(String descricao) async{
- 
-    var usuario=await FlutterSession().get('usuarioId');
+ var usuario=await FlutterSession().get('usuarioId');
     final url=Uri.parse(ApiConstants.solicitacoes_salvarUrl);
     final response=await http.post(url,body: {
       "descricao":descricao,

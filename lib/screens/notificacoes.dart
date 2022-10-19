@@ -3,6 +3,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:portagem_web/model/notificacao.dart';
 
 import '../services/notificacoes_service.dart';
+import 'menubottom.dart';
 import 'notificacoes_detalhes.dart';
 
 class Notificacoes extends StatefulWidget {
@@ -28,8 +29,9 @@ class _NotificacoesState extends State<Notificacoes> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomMenu(selected: 3),
       appBar: AppBar(
-        title: const Text("Minhas Notificações"),
+      title: const Text("Minhas Notificações"),
       ),
       body: SafeArea(
         child: Column(

@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_session/flutter_session.dart';
-import 'package:portagem_web/screens/create.dart';
-import 'package:portagem_web/screens/provincias.dart';
-import 'package:portagem_web/screens/provincias_form.dart';
 import 'package:portagem_web/screens/reportar_problema.dart';
 import 'package:portagem_web/screens/solicitacao.dart';
-import 'login2.dart';
-import 'inicio.dart';
 import 'equipamento_categoria.dart';
+import 'login2.dart';
 import 'meu_turno.dart';
 import 'notificacoes.dart';
 
@@ -25,7 +22,7 @@ class NavBar extends StatelessWidget {
            children: [
           UserAccountsDrawerHeader(
            accountName: Text(projectSnap.data.toString(),style: const TextStyle(fontSize: 20),), 
-           accountEmail: const Text('portagem@gmail.com',style: TextStyle(fontSize: 18),
+           accountEmail: const Text('',style: TextStyle(fontSize: 18),
           ),
             //currentAccountPicture: CircleAvatar(
              // child: ClipOval(
@@ -70,13 +67,11 @@ class NavBar extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.person),
             title: const Text('Minha Informação'),
-            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>Inicio())),
-          //  Navigator.push(context, MaterialPageRoute(builder: (context)=>Inicio()));
-            
+            onTap: () =>  null,
           ),
           const Divider(),
           ListTile(
-            leading: Icon(Icons.share),
+            leading: const Icon(Icons.share),
             title: const Text('Meu Turno'),
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context)=>MeuTurno()));
@@ -85,7 +80,8 @@ class NavBar extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.notifications),
             title: const Text('Minhas Notificações'),
-             onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>Notificacoes())),
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>Notificacoes())),
+            // onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>Login2())),
           ),
          
           const Divider(),
@@ -94,7 +90,7 @@ class NavBar extends StatelessWidget {
             title: const Text('Sair'),
             leading: const Icon(Icons.exit_to_app),
             onTap: () {
-            
+              SystemNavigator.pop();
             }
           ),
         ],
