@@ -14,8 +14,8 @@ static String loginUrl=('$urlBase/apilogin');
 
     static String checkListUrl=('$urlBase/checkListUser');
     static String turno_userUrl=('$urlBase/userturno/');
-    //  static String reportar_problema=('$urlBase/salvarProblema');
-    static String reportar_problema='http://192.168.0.172:9000/api/salvarProblema';
+     static String reportar_problema=('$urlBase/salvarProblema');
+    //static String reportar_problema='http://192.168.0.172:9000/api/salvarProblema';
     //-------------------//------------------------------//------------------------
     static String portagensUrl=('$urlBase/portagens');
     static String check_inUrl=('$urlBase/check_in');

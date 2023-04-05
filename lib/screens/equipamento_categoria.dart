@@ -22,14 +22,6 @@ class _Equipamento_CategoriaState extends State<Equipamento_Categoria> {
   Widget build(BuildContext context) {
  
      return Container(
-      // decoration: const BoxDecoration(
-      //     image: DecorationImage(
-      //   fit: BoxFit.cover,
-      //   image: NetworkImage(
-      //     'https://www.kindacode.com/wp-content/uploads/2021/01/blue.jpg',
-      //   ),
-        
-      // )),
       child: Scaffold( 
           backgroundColor: Colors.transparent,
           appBar: AppBar(title: const Text('Equipamento Activo'),),
@@ -42,8 +34,7 @@ class _Equipamento_CategoriaState extends State<Equipamento_Categoria> {
               color: Colors.blue,
               height: MediaQuery.of(context).size.height*0.40,
             ),
-           
-              Center(
+             Center(
               child: Card(
                 shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(18),
@@ -70,25 +61,15 @@ class _Equipamento_CategoriaState extends State<Equipamento_Categoria> {
                   shadowColor: MaterialStateProperty.all(Colors.black),
                   padding: MaterialStateProperty.all(const EdgeInsets.all(27)),
                   minimumSize: MaterialStateProperty.all(const Size(250, 35)),
-                      // fixedSize: MaterialStateProperty.all(const Size(200, 40)),
-                //  side: MaterialStateProperty.all(
-                //  const BorderSide(
-                //   color: Colors.black,
-                //   width: 1,
-                //  ),
-                //  ),
-    
                 shape: MaterialStateProperty.all(
                 RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(18),
                  ),
                ),
                ),
-                ),
- 
-            
-                Padding(
-                padding: const EdgeInsets.symmetric(vertical: 15.0),
+              ),
+               const Padding(
+                padding: EdgeInsets.symmetric(vertical: 15.0),
                  ),
                    ElevatedButton(
                   onPressed: () {
@@ -100,15 +81,7 @@ class _Equipamento_CategoriaState extends State<Equipamento_Categoria> {
                   shadowColor: MaterialStateProperty.all(Colors.black),
                   padding: MaterialStateProperty.all(const EdgeInsets.all(27)),
                   minimumSize: MaterialStateProperty.all(const Size(250, 35)),
-                      // fixedSize: MaterialStateProperty.all(const Size(200, 40)),
-                //  side: MaterialStateProperty.all(
-                //  const BorderSide(
-                //   color: Colors.black,
-                //   width: 1,
-                //  ),
-                //  ),
-    
-                 shape: MaterialStateProperty.all(
+                  shape: MaterialStateProperty.all(
                 RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(18),
                  ),
@@ -120,7 +93,7 @@ class _Equipamento_CategoriaState extends State<Equipamento_Categoria> {
                 ),
                ElevatedButton(
                   onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Pistas()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Pistas()));
                   },
                   child: const Text('PISTAS'),
                   style: ButtonStyle(

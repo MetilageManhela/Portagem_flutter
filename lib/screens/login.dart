@@ -56,8 +56,7 @@ bool hide = true;
               padding: EdgeInsets.only(top: 50,left: 40),
               child: Text("Bem \nVindo",
               style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 60,fontWeight: FontWeight.w400),),
-              )
- ,            Container(
+              ),            Container(
               padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 10),
               margin: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.45),
               width: double.infinity,
@@ -127,15 +126,7 @@ bool hide = true;
                           }, child: const Text("Entrar")
                           ),
                     ),
-                    // Row(
-                    //   mainAxisAlignment: MainAxisAlignment.center,
-                    //   children: [
-                    //     Text("Don't have an account"),
-                    //     TextButton(onPressed: (){
-                        
-                    //     }, child: Text("Sign Up? "))
-                    //   ],
-                    // )
+                    
                   ],
                 ),
               ),
