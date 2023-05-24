@@ -31,16 +31,26 @@ class _Solicitacao extends State<Solicitacao>{
             ),
             body:SafeArea(
               child: Container( 
+                constraints: const BoxConstraints.expand(),
+              // height: double.infinity,
+              // width: double.infinity,
+              decoration: const BoxDecoration(
+              image: DecorationImage(
+              image: AssetImage('assets/imagens/portagem.jpeg'),
+              opacity: 0.5,
+             fit: BoxFit.cover),
+             ),
+                
                  padding: const EdgeInsets.all(25),
                  child: Column(
                    mainAxisAlignment: MainAxisAlignment.end,
                    children: [
-                     const SizedBox( height: 100,),
+                     const SizedBox( height: 100),
                       TextField(
                       controller: solicitacao_Controller,
                       autocorrect: true,
                       decoration: const InputDecoration(
-                      labelText: 'Descreva Solicitacao',
+                      labelText: 'Descreva Solicitação',
                       helperText: " ",
                     ),
                    ),
@@ -51,7 +61,7 @@ class _Solicitacao extends State<Solicitacao>{
                           context: context,
                           type: AlertType.warning,
                           //title: "",
-                          desc: "Deseja submeter a solicitacao??",
+                          desc: "Deseja submeter a solicitação?",
                           buttons: [
                             DialogButton(
                               child: const Text(

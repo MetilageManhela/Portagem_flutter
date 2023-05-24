@@ -6,12 +6,12 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
 @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {  
     return  MaterialApp(
      debugShowCheckedModeBanner: false,
       //theme: ThemeData(primaryColor: Color.fromRGBO(58, 66, 86, 1.0)),
       home: const LoginPage(),
-      builder: EasyLoading.init(),
+      builder: EasyLoading.init(),  
     );
   }
-}
+}  

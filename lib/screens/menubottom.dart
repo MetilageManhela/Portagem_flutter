@@ -54,14 +54,14 @@ class _BottomMenu extends State<BottomMenu> {
                 //   Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
                 //  Lista(title: 'Seccao',)));
 
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>const Notificacoes()));
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const Notificacoes()));
                 } 
                 break; 
-                case 4: {
-                 Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>
-                 Perfil()));
-                 } 
-                break; 
+                // case 4: {
+                //  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>
+                //  Perfil()));
+                //  } 
+                // break; 
                 
                 // case 5: {
                 //   SystemNavigator.pop();

@@ -231,6 +231,7 @@ Future submeter_checkList() async{
     EasyLoading.dismiss();
     EasyLoading.showError('Erro ao submeter!');
     Navigator.pop(context);
+    print(response.body);
   };
 }
   
